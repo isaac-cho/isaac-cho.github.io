@@ -54,38 +54,38 @@ sections:
     design:
       columns: '1'
 
-  # - block: markdown
-  #   id: news
-  #   content:
-  #     title: News
-  #     text: |-
-  #       - **Jun 2026** — Paper accepted to IEEE ISMAR 2026.
-  #       - **Jun 2026** — Joined the Editorial Board of Computers & Graphics.
-  #       - **Jun 2026** — Received IEEE Senior Member status.
-  #   design:
-  #     columns: '1'
-  # - block: collection
-  #   id: news
-  #   content:
-  #     title: Recent News
-  #     subtitle: ''
-  #     text: ''
-  #     page_type: post
-  #     count: 10
-  #     filters:
-  #       author: ''
-  #       category: ''
-  #       tag: ''
-  #       exclude_featured: false
-  #       exclude_future: false
-  #       exclude_past: false
-  #       publication_type: ''
-  #     offset: 0
-  #     order: desc
-  #   design:
-  #     view: date-title-summary
-  #     spacing:
-  #       padding: [0, 0, 0, 0]
+  - block: markdown
+    id: news
+    content:
+      title: News
+      text: |-
+        - **Jun 2026** — Paper accepted to IEEE ISMAR 2026.
+        - **Jun 2026** — Joined the Editorial Board of Computers & Graphics.
+        - **Jun 2026** — Received IEEE Senior Member status.
+    design:
+      columns: '1'
+  - block: collection
+    id: news
+    content:
+      title: Recent News
+      subtitle: ''
+      text: ''
+      page_type: post
+      count: 10
+      filters:
+        author: ''
+        category: ''
+        tag: ''
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+        publication_type: ''
+      offset: 0
+      order: desc
+    design:
+      view: date-title-summary
+      spacing:
+        padding: [0, 0, 0, 0]
 
   # - block: collection
   #   id: papers
