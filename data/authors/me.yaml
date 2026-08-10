@@ -1,116 +1,141 @@
 schema: hugoblox/author/v1
 slug: me
 is_owner: true
+
 name:
-  display: Dr. Alex Johnson
-  given: Alex
-  family: Johnson
-  alternate: ''  # Example: 王伟
+  display: Dr. Isaac Cho 
+  given: Isaac
+  family: Cho
+  alternate: '이삭'  # Example: 王伟
   pronunciation: ''  # Example: Wáng Wěi
   pronouns: he/him
+
 postnominals:
   - PhD
-  - MIEEE
-status:
-  icon: "☕️"
-role: Senior AI Research Scientist
-bio: |
-  Alex Johnson is a Senior AI Research Scientist at Meta AI. His research
-  has been published in top conferences like NeurIPS and ICML, with over
-  10,000 citations. Alex is passionate about pushing the boundaries of AI
-  while ensuring ethical development.
+  - SMIEEE
 
+status:
+  icon: "" # Example: "☕️"
+
+role: Associate Professor of Computer Science
+
+bio: |
+  Isaac Cho is an Associate Professor of Computer Science at Hallym University. His research focuses on data visualization, visual analytics, immersive analytics, virtual reality, extended reality, augmented reality, and 3D user interfaces. His work explores how people interact with, perceive, and make decisions using visual and immersive systems. Prior to join Hallym University, he was an assistant professor in the computer science unveristy at Utah State Unviersity and North Carolina A&T State Unviersity.
+  
 affiliations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: Hallym University
+    url: https://www.hallym.ac.kr/
 
 links:
   - icon: at-symbol
-    url: mailto:alex.johnson@example.com
+    url: mailto:vizic2018@gmail.com
     label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
-  - icon: brands/github
-    url: https://github.com/example
+  # - icon: brands/x
+  #   url: https://x.com/vizic2018
+  # - icon: brands/github
+  #   url: https://github.com/vizic2018
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/example/
+    url: https://www.linkedin.com/in/choissac/
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=example
+    url: https://scholar.google.com/citations?user=YOUR_ID
   - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://orcid.org/YOUR_ORCID
 
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - Data Visualization
+  - Visual Analytics
+  - Immersive Analytics
+  - Virtual Reality
+  - Extended Reality
+  - Spatial Computing
+  - 3D User Interfaces
+  - Human-Computer Interaction
 
 education:
-  - degree: PhD Computer Science
-    institution: Stanford University
-    start: 2015-09-01
-    end: 2019-06-30
+  - degree: PhD in Computing and Information Systems (Computer Science Track)
+    institution: University of North Carolina at Charlotte
+    # start: 2009-08-01
+    # end: 2013-12-31
     summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
+      Dissertation research in visual analytics, interactive visualization, and human-centered computing.
+    # button:
+    #   text: Download dissertation
+    #   url: /dissertation.pdf
+    #   icon: hero/arrow-down-tray
+
+  - degree: BS in Computer Science
+    institution: Hallym University
+    # start: 2009-08-01
+    # end: 2013-12-31
+    summary: |
+      ""
+    # button:
+    #   text: Download dissertation
+    #   url: /dissertation.pdf
+    #   icon: hero/arrow-down-tray
 
 experience:
-  - role: Senior AI Research Scientist
-    org: Meta AI
-    start: 2020-01-01
+  - role: Associate Professor
+    org: Hallym University
+    start: 2026-09-01
     summary: |
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models.
-    button:
-      text: View portfolio
-      url: /
-      icon: hero/arrow-down-tray
-  - role: AI Research Intern
-    org: OpenAI
-    start: 2019-06-01
-    end: 2019-12-31
+      Research and teaching in computer science, data visualization, visual analytics, immersive analytics, virtual reality, extended reality, augmented reality, and 3D user interfaces.
+
+  - role: Assistant Professor
+    org: Utah State University
+    start: 2021-06-01
+    end: 2026-06-30
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      Directed research in visualization, visual analytics, immersive analytics, VR/AR/XR, and 3D user interfaces. Taught undergraduate and graduate courses in data visualization, virtual reality, programming languages, and scientific visualization.
+  
+  - role: Adjunct Assistant Professor
+    org: University of North Carolina at Charlotte
+    start: 2026-01-01
+    summary: |
+      Continued academic collaboration, research supervision, and scholarly service.
+
+  - role: Adjunct Assistant Professor
+    org: University of North Carolina at Charlotte
+    start: 2026-01-01
+    summary: |
+      Continued academic collaboration, research supervision, and scholarly service.
 
 skills:
-  - name: Technical Skills
+  - name: Research Areas
     items:
-      - label: Python
+      - label: Data Visualization
         level: 5
-      - label: Machine Learning
+      - label: Visual Analytics
         level: 5
-      - label: Cloud Computing
-        level: 4
-  - name: Research & Communication
+      - label: Immersive Analytics
+        level: 5
+      - label: VR/AR/XR
+        level: 5
+      - label: 3D User Interfaces
+        level: 5
+
+  - name: Academic Skills
     items:
       - label: Academic Writing
         level: 5
-      - label: Conference Presentations
-        level: 4
       - label: Grant Proposals
-        level: 4
+        level: 5
+      - label: Conference Presentations
+        level: 5
+      - label: Student Mentoring
+        level: 5
 
 languages:
-  - name: English
+  - name: Korean
     level: 5
     label: Native
-  - name: Spanish
-    level: 4
+  - name: English
+    level: 5
     label: Fluent
 
 awards:
-  - title: Best Paper Award
-    awarder: NeurIPS
-    date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
-    icon: hero/trophy
+  # - title: Best Paper Award
+  #   awarder: Conference Name
+  #   date: "YYYY-MM-DD"
+  #   summary: Award description.
+  #   icon: hero/trophy
