@@ -1,0 +1,45 @@
+{{ $item := .item }}
+
+<div class="news-list-item">
+
+  <span class="news-list-date">
+      {{ with $item.Params.links }}
+      <span class="news-list-links">
+        {{ range . }}
+          <a
+            href="{{ .url }}"
+            {{ if strings.HasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }}
+          >
+            {{ .name | default "More" }}
+          </a>
+        {{ end }}
+      </span>
+    {{ end }}
+
+    {{/* {{ $item.Date.Format "Jan 2006" }} */}}
+  </span>
+
+  <div class="news-list-content">
+
+    <span class="news-list-title">
+      {{ $item.Title }}
+    </span>
+{{/* 
+    {{ with $item.Params.links }}
+      <span class="news-list-links">
+        {{ range . }}
+          <a
+            href="{{ .url }}"
+            {{ if strings.HasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }}
+          >
+            {{ .name | default "More" }}
+          </a>
+        {{ end }}
+      </span>
+    {{ end }} */}}
+    <a href="{{ $item.RelPermalink }}" class="news-more-button">
+      MORE
+    </a>
+  </div>
+
+</div>

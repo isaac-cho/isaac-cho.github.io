@@ -1,0 +1,51 @@
+{{ $item := .item }}
+
+<div class="news-list-item">
+  <span class="news-list-date">
+    {{ $item.Date.Format "Jan 2006" }}
+  </span>
+
+  <a href="{{ $item.RelPermalink }}" class="news-list-title">
+    {{ $item.Title }}
+  </a>
+</div>
+
+<style>
+.news-list-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+}
+
+.news-list-date {
+  flex: 0 0 85px;
+  color: #64748b;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.news-list-title {
+  color: inherit;
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.news-list-title:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .news-list-item {
+    display: block;
+  }
+
+  .news-list-date {
+    display: block;
+    margin-bottom: 0.1rem;
+  }
+}
+</style>
