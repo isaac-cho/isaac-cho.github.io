@@ -52,6 +52,7 @@ sections:
 
         Please feel free to reach out for research collaboration.
     design:
+      css_class: wide-news
       columns: '1'
 
   - block: markdown
@@ -63,7 +64,8 @@ sections:
         - **Aug 2026** — Two papers were accepted to the IEEE TVCG Special Track and one paper to the Conference Track at IEEE ISMAR 2026.
         - **June 2026** — Elevated to IEEE Senior Member.
         - **April 2026** — Joined the Editorial Board of Computers & Graphics as an Associate Editor.
-        
+    design:
+      css_class: wide-news
   #   design:
   #     columns: '1'
   # - block: collection

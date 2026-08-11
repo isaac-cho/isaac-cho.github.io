@@ -8,7 +8,7 @@
 
 # Generated site output
 public/
-
+_vendor/
 # Hugo resources (processed assets)
 resources/
 

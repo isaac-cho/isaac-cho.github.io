@@ -1,0 +1,7 @@
+/* Make markdown blocks wider */
+.wide-news .prose,
+.wide-news .max-w-prose,
+.wide-news .hb-markdown {
+  max-width: 1000px !important;
+  width: 100% !important;
+}
