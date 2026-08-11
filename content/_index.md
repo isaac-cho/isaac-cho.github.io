@@ -59,33 +59,35 @@ sections:
     content:
       title: News
       text: |-
-        - **Jun 2026** — Paper accepted to IEEE ISMAR 2026.
-        - **Jun 2026** — Joined the Editorial Board of Computers & Graphics.
-        - **Jun 2026** — Received IEEE Senior Member status.
-    design:
-      columns: '1'
-  - block: collection
-    id: news
-    content:
-      title: Recent News
-      subtitle: ''
-      text: ''
-      page_type: post
-      count: 10
-      filters:
-        author: ''
-        category: ''
-        tag: ''
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ''
-      offset: 0
-      order: desc
-    design:
-      view: date-title-summary
-      spacing:
-        padding: [0, 0, 0, 0]
+        - **Aug 2026** — Served on the International Program Committee (IPC) for IEEE Virtual Reality and 3D User Interfaces (IEEE VR).
+        - **Aug 2026** — Two papers were accepted to the IEEE TVCG Special Track and one paper to the Conference Track at IEEE ISMAR 2026.
+        - **June 2026** — Elevated to IEEE Senior Member.
+        - **April 2026** — Joined the Editorial Board of Computers & Graphics as an Associate Editor.
+        
+  #   design:
+  #     columns: '1'
+  # - block: collection
+  #   id: news
+  #   content:
+  #     title: Recent News
+  #     subtitle: ''
+  #     text: ''
+  #     page_type: post
+  #     count: 10
+  #     filters:
+  #       author: ''
+  #       category: ''
+  #       tag: ''
+  #       exclude_featured: false
+  #       exclude_future: false
+  #       exclude_past: false
+  #       publication_type: ''
+  #     offset: 0
+  #     order: desc
+  #   design:
+  #     view: date-title-summary
+  #     spacing:
+  #       padding: [0, 0, 0, 0]
 
   # - block: collection
   #   id: papers
@@ -99,16 +101,16 @@ sections:
   #     view: article-grid
   #     columns: 2
 
-  # - block: collection
-  #   content:
-  #     title: Recent Publications
-  #     text: ''
-  #     filters:
-  #       folders:
-  #         - publications
-  #       exclude_featured: false
-  #   design:
-  #     view: citation
+  - block: collection
+    content:
+      title: Recent Publications
+      text: ''
+      filters:
+        folders:
+          - publications
+        exclude_featured: false
+    design:
+      view: citation
 
   # - block: collection
   #   id: talks

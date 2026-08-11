@@ -3,7 +3,7 @@ slug: me
 is_owner: true
 
 name:
-  display: Dr. Isaac Cho 
+  display: Isaac Cho, Ph.D.
   given: Isaac
   family: Cho
   alternate: '이삭'  # Example: 王伟
@@ -20,7 +20,7 @@ status:
 role: Associate Professor of Computer Science
 
 bio: |
-  Isaac Cho is an Associate Professor of Computer Science at Hallym University. His research focuses on data visualization, visual analytics, immersive analytics, virtual reality, extended reality, augmented reality, and 3D user interfaces. His work explores how people interact with, perceive, and make decisions using visual and immersive systems. Prior to join Hallym University, he was an assistant professor in the computer science unveristy at Utah State Unviersity and North Carolina A&T State Unviersity.
+  Isaac Cho is an Associate Professor in the Computer Science department at Hallym University. His research focuses on data visualization, visual analytics, immersive analytics, virtual reality, extended reality, augmented reality, and 3D user interfaces. His work explores how people interact with, perceive, and make decisions using visual and immersive systems. Prior to join Hallym University, he was an assistant professor in the computer science unveristy at Utah State Unviersity and North Carolina A&T State Unviersity.
   
 affiliations:
   - name: Hallym University
@@ -28,7 +28,7 @@ affiliations:
 
 links:
   - icon: at-symbol
-    url: mailto:vizic2018@gmail.com
+    url: mailto:drisaaccho@gmail.com
     label: E-mail Me
   # - icon: brands/x
   #   url: https://x.com/vizic2018
@@ -37,9 +37,9 @@ links:
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/choissac/
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=YOUR_ID
-  - icon: academicons/orcid
-    url: https://orcid.org/YOUR_ORCID
+    url: https://scholar.google.com/citations?user=Kd9XSZEAAAAJ
+  # - icon: academicons/orcid
+  #   url: https://orcid.org/YOUR_ORCID
 
 interests:
   - Data Visualization
@@ -52,7 +52,7 @@ interests:
   - Human-Computer Interaction
 
 education:
-  - degree: PhD in Computing and Information Systems (Computer Science Track)
+  - degree: PhD in Computer Science
     institution: University of North Carolina at Charlotte
     # start: 2009-08-01
     # end: 2013-12-31
@@ -63,8 +63,8 @@ education:
     #   url: /dissertation.pdf
     #   icon: hero/arrow-down-tray
 
-  - degree: BS in Computer Science
-    institution: Hallym University
+  - degree: BS in Computer Science (Highest Honor)
+    institution: Hallym University 
     # start: 2009-08-01
     # end: 2013-12-31
     summary: |
