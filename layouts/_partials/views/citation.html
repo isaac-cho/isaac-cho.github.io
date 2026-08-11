@@ -115,10 +115,28 @@
       {{/* APA Style */}}
       {{ if eq (site.Params.hugoblox.content.citations.style | default "apa") "apa" }}
 
+      {{ $pubType := "" }}
+      {{ with $item.Params.publication_types }}
+        {{ $pubType = index . 0 }}
+      {{ end }}
+
+      {{ if eq $pubType "article-journal" }}
+        <span class="pub-type-badge pub-type-journal">Journal</span>
+      {{ else if eq $pubType "paper-conference" }}
+        <span class="pub-type-badge pub-type-conference">Conference</span>
+      {{ else if eq $pubType "chapter" }}
+        <span class="pub-type-badge pub-type-chapter">Book Chapter</span>
+      {{ else if eq $pubType "report" }}
+        <span class="pub-type-badge pub-type-report">Report</span>
+      {{ else if eq $pubType "manuscript" }}
+        <span class="pub-type-badge pub-type-preprint">Preprint</span>
+      {{ end }}
+
       <span class="article-metadata li-cite-author">
         {{ partial "page_metadata_authors" $item }}
       </span>
       ({{- $year -}}).
+
       <a href="{{ $item.RelPermalink }}" class="underline">{{ $item.Title }}</a>.
       {{ with $pub.display_short }}{{- . | markdownify -}}.{{ end }}
 
@@ -161,3 +179,67 @@
 
   </div>
 </div>
+
+<style>
+.pub-type-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  margin-right: 0.35rem;
+  border-radius: 0.35rem;
+  font-size: 0.70rem;
+  font-weight: 600;
+  line-height: 1.3;
+  vertical-align: 0.1em;
+  white-space: nowrap;
+}
+
+.pub-type-journal {
+  color: #1d4ed8;
+  background-color: #dbeafe;
+}
+
+.pub-type-conference {
+  color: #047857;
+  background-color: #d1fae5;
+}
+
+.pub-type-chapter {
+  color: #7c3aed;
+  background-color: #ede9fe;
+}
+
+.pub-type-report {
+  color: #b45309;
+  background-color: #fef3c7;
+}
+
+.pub-type-preprint {
+  color: #be123c;
+  background-color: #ffe4e6;
+}
+
+.dark .pub-type-journal {
+  color: #bfdbfe;
+  background-color: #1e3a8a;
+}
+
+.dark .pub-type-conference {
+  color: #a7f3d0;
+  background-color: #064e3b;
+}
+
+.dark .pub-type-chapter {
+  color: #ddd6fe;
+  background-color: #4c1d95;
+}
+
+.dark .pub-type-report {
+  color: #fde68a;
+  background-color: #78350f;
+}
+
+.dark .pub-type-preprint {
+  color: #fecdd3;
+  background-color: #881337;
+}
+</style>

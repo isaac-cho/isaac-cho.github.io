@@ -5,3 +5,82 @@
   max-width: 1000px !important;
   width: 100% !important;
 }
+#publication-filters {
+  gap: 0.5rem !important;
+}
+
+.pub-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.38rem 0.75rem;
+  border-radius: 8px;
+
+  border: 1px solid #d7dee8;
+  background: transparent;
+
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.2;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.pub-filter:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.pub-filter.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.pub-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.32rem;
+
+  border-radius: 5px;
+
+  font-size: 0.67rem;
+  font-weight: 600;
+  line-height: 1;
+
+  color: #64748b;
+  background: #eef2f7;
+}
+
+.pub-filter.active .pub-count {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.20);
+}
+
+.dark .pub-filter {
+  border-color: #334155;
+}
+
+.dark .pub-filter:hover {
+  background: #1e293b;
+  border-color: #64748b;
+}
+
+.dark .pub-count {
+  color: #cbd5e1;
+  background: #334155;
+}
+
+.dark .pub-filter.active .pub-count {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+}

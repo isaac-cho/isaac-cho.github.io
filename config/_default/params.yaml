@@ -61,8 +61,8 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   typography:
     # Theme pack: name from data/fonts/
-    pack: "academic"
-
+    # pack: "academic"
+    pack: "roboto"
   # ────────────────────────────────────────────────────────────────────────────
   # LAYOUT
   # Spacing and shape tokens
