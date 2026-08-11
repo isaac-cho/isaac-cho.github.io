@@ -15,21 +15,21 @@ hugoblox:
     body: "Roboto"
     code: "Roboto Mono"
 
-  weights:
-    heading: [400, 500, 600]
-    body: [400, 500]
-    code: [400]
+weights:
+  heading: [400, 500, 600]
+  body: [400, 500]
+  code: [400]
 
-  leading:
-    heading: 1.15
-    body: 1.55
-    code: 1.5
+leading:
+  heading: 1.2
+  body: 1.6
+  code: 1.5
 
-  tracking:
-    heading: "-0.015em"
-    body: "-0.005em"
+tracking:
+  heading: "-0.01em"
+  body: "0"
 
-  variable:
-    heading: true
-    body: true
-    code: true
+variable:
+  heading: true
+  body: true
+  code: true

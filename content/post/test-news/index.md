@@ -1,10 +1,14 @@
 ---
-title: We are pleased to announce that our paper  has been accepted to IEEE ISMAR 2026.Blah Blah Paper Accepted to IEEE ISMAR 2026"
-date: 2026-06-29
-summary: "We are pleased to announce that our paper has been accepted to IEEE ISMAR 2026. "
-draft: false
----
+title: "Paper accepted to IEEE ISMAR 2026"
+date: 2026-08-01
 
+links:
+  - name: Paper
+    url: https://doi.org/xxxxx
+
+  - name: ISMAR
+    url: https://www.ieeeismar.org/
+---
 
 We are pleased to announce that our paper **"XXX"** has been accepted to IEEE ISMAR 2026.
 

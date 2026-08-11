@@ -41,19 +41,18 @@ sections:
 
         
       
-  - block: markdown
-    content:
-      title: 'Research'
-      subtitle: ''
-      text: |-
-        I am a computer scientist working at the intersection of data visualization, visual analytics, immersive analytics, virtual reality, extended reality, augmented reality, and 3D user interfaces.
+  # - block: markdown
+  #   content:
+  #     title: 'Research'
+  #     subtitle: ''
+  #     text: |-
+  #       I am a computer scientist working at the intersection of data visualization, visual analytics, immersive analytics, virtual reality, extended reality, augmented reality, and 3D user interfaces.
 
-        My research investigates how people perceive, interact with, and make decisions using visual and immersive systems. I design and evaluate interactive technologies that support data exploration, spatial interaction, collaborative analysis, and human-centered sensemaking.
+  #       My research investigates how people perceive, interact with, and make decisions using visual and immersive systems. I design and evaluate interactive technologies that support data exploration, spatial interaction, collaborative analysis, and human-centered sensemaking.
 
-        Please feel free to reach out for research collaboration.
-    design:
-      css_class: wide-news
-      columns: '1'
+  #       Please feel free to reach out for research collaboration.
+  #   design:
+  #     css_class: wide-news
 
   - block: markdown
     id: news
@@ -68,6 +67,30 @@ sections:
       css_class: wide-news
   #   design:
   #     columns: '1'
+
+  - block: collection
+    id: news
+    content:
+      title: News
+      subtitle: ''
+      text: ''
+      page_type: post
+      count: 10
+      filters:
+        author: ''
+        category: ''
+        tag: ''
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+        publication_type: ''
+      offset: 0
+      order: desc
+    design:
+      view: news-list
+      # view: date-title-summary
+      spacing:
+        padding: [0, 0, 0, 0]
   # - block: collection
   #   id: news
   #   content:
@@ -87,7 +110,8 @@ sections:
   #     offset: 0
   #     order: desc
   #   design:
-  #     view: date-title-summary
+    
+  #     # view: date-title-summary
   #     spacing:
   #       padding: [0, 0, 0, 0]
 

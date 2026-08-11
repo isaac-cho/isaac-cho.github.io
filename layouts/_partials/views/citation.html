@@ -119,17 +119,26 @@
       {{ with $item.Params.publication_types }}
         {{ $pubType = index . 0 }}
       {{ end }}
-
       {{ if eq $pubType "article-journal" }}
         <span class="pub-type-badge pub-type-journal">Journal</span>
+
       {{ else if eq $pubType "paper-conference" }}
         <span class="pub-type-badge pub-type-conference">Conference</span>
+
+      {{ else if eq $pubType "workshop" }}
+        <span class="pub-type-badge pub-type-workshop">Workshop</span>
+
+      {{ else if eq $pubType "poster-abstract" }}
+        <span class="pub-type-badge pub-type-poster">Poster / Abstract</span>
+
       {{ else if eq $pubType "chapter" }}
         <span class="pub-type-badge pub-type-chapter">Book Chapter</span>
+
       {{ else if eq $pubType "report" }}
         <span class="pub-type-badge pub-type-report">Report</span>
-      {{ else if eq $pubType "manuscript" }}
-        <span class="pub-type-badge pub-type-preprint">Preprint</span>
+
+      {{ else if eq $pubType "technical-report-preprint" }}
+          <span class="pub-type-badge pub-type-report">Technical Report</span>
       {{ end }}
 
       <span class="article-metadata li-cite-author">
@@ -181,6 +190,27 @@
 </div>
 
 <style>
+
+@media (max-width: 700px) {
+  .publication-citation-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .publication-thumb {
+    width: 180px;
+    flex: none;
+  }
+
+  .publication-thumb img {
+    width: 180px;
+    height: 108px;
+  }
+
+  .publication-citation-text {
+    width: 100%;
+  }
+}
 .pub-type-badge {
   display: inline-block;
   padding: 0.15rem 0.5rem;
@@ -208,14 +238,24 @@
   background-color: #ede9fe;
 }
 
-.pub-type-report {
-  color: #b45309;
-  background-color: #fef3c7;
+.dark .pub-type-workshop {
+  color: #fed7aa;
+  background-color: #7c2d12;
 }
 
 .pub-type-preprint {
   color: #be123c;
   background-color: #ffe4e6;
+}
+
+.pub-type-workshop {
+  color: #b45309;
+  background-color: #fef3c7;
+}
+
+.pub-type-poster {
+  color: #be185d;
+  background-color: #fce7f3;
 }
 
 .dark .pub-type-journal {
@@ -234,12 +274,22 @@
 }
 
 .dark .pub-type-report {
-  color: #fde68a;
-  background-color: #78350f;
+  color: #cbd5e1;
+  background-color: #334155;
 }
 
 .dark .pub-type-preprint {
   color: #fecdd3;
   background-color: #881337;
+}
+
+.dark .pub-type-workshop {
+  color: #fed7aa;
+  background-color: #475569;
+}
+
+.dark .pub-type-poster {
+  color: #fbcfe8;
+  background-color: #831843;
 }
 </style>
