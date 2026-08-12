@@ -77,7 +77,7 @@ sections:
       subtitle: ''
       text: ''
       page_type: news
-      count: 10
+      count: 3
       filters:
         author: ''
         category: ''
@@ -135,6 +135,7 @@ sections:
     content:
       title: Selected Publications
       text: ''
+      count: 100
       filters:
         folders:
           - publications
@@ -145,7 +146,22 @@ sections:
     archive:
       enable: true
     
-
+  - block: markdown
+    content:
+      text: |
+        <div class="container mx-auto max-w-screen-lg px-8 xl:px-5 pb-5 lg:pb-8">
+          <div class="mt-0 flex justify-center">
+            <a
+              class="relative inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 no-underline hover:no-underline hover:bg-gray-50 focus:z-20 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
+              href="/publications/"
+            >
+              <span>See all publications</span>
+            </a>
+          </div>
+        </div>
+    design:
+      spacing:
+        padding: [0, 0, 0, 0]
   # - block: collection
   #   id: talks
   #   content:

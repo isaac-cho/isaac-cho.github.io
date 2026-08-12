@@ -1,4 +1,7 @@
 /* Section spacing */
+#publications a.publications-all-button {
+  text-decoration: none !important;
+}
 #news {
   padding-top: 1.5rem !important;
   padding-bottom: 0.75rem !important;
@@ -117,4 +120,172 @@
 .dark .pub-filter.active .pub-count {
   color: #fff;
   background: rgba(255, 255, 255, 0.18);
+}
+/* ============================================================
+   Research page
+   ============================================================ */
+
+.research-page .prose,
+.research-page .max-w-prose,
+.research-page .hb-markdown {
+  width: 100% !important;
+  max-width: 860px !important;
+}
+
+
+/* Main body */
+
+.research-page p {
+  font-size: 0.95rem !important;
+  line-height: 1.68 !important;
+  color: #475569;
+}
+
+
+/* Main Research heading */
+
+.research-overview h2 {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+
+/* Main research directions */
+
+.research-direction h2,
+.research-future h2 {
+  font-size: 1.35rem !important;
+  font-weight: 650 !important;
+  line-height: 1.3 !important;
+  margin-bottom: 1rem !important;
+}
+
+
+/* Future sub-directions */
+
+.research-future h3 {
+  margin-top: 1.6rem !important;
+  margin-bottom: 0.35rem !important;
+
+  font-size: 1rem !important;
+  font-weight: 650 !important;
+}
+
+
+/* Research images */
+
+.research-direction img,
+.research-page img {
+  display: block;
+
+  width: 100%;
+  max-width: 850px;
+  height: auto !important;
+  max-height: none !important;
+
+  margin: 1.5rem auto 2rem;
+
+  object-fit: contain !important;
+
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Selected papers */
+
+.research-direction p strong {
+  font-size: 0.74rem;
+  font-weight: 650;
+
+  color: #64748b;
+
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+}
+
+
+.research-direction ul {
+  margin-top: 0.4rem !important;
+  padding-left: 1.1rem !important;
+}
+
+
+.research-direction li {
+  margin: 0.25rem 0 !important;
+
+  font-size: 0.84rem !important;
+  line-height: 1.5 !important;
+}
+
+
+.research-direction li a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+
+.research-direction li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+
+/* Very subtle separation between directions */
+
+.research-direction {
+  border-top: 1px solid #e2e8f0;
+}
+
+
+.research-future {
+  border-top: 1px solid #e2e8f0;
+}
+
+
+/* Dark */
+
+.dark .research-page p {
+  color: #cbd5e1;
+}
+
+.dark .research-direction,
+.dark .research-future {
+  border-color: #334155;
+}
+
+.dark .research-direction img {
+  border-color: #334155;
+}
+
+.dark .research-direction li a {
+  color: #a5b4fc;
+}
+
+
+/* Mobile */
+
+@media (max-width: 640px) {
+
+  .research-overview h2 {
+    font-size: 1.7rem !important;
+  }
+
+  .research-direction h2,
+  .research-future h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .research-page p {
+    font-size: 0.88rem !important;
+  }
+
+  .research-direction li {
+    font-size: 0.8rem !important;
+  }
+
+  .research-direction img {
+    max-height: 220px;
+  }
 }

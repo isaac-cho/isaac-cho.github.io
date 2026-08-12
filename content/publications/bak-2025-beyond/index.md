@@ -8,6 +8,13 @@ authors:
 - SunJeong Kim
 - Isaac Cho
 date: '2025-01-01'
+featured: true
+links:
+- type: preprint
+  provider: arxiv
+  id: 2509.1134
+- type: video
+  url: https://www.youtube.com/watch?v=nkifh6Rc37w
 publishDate: '2026-08-11T12:59:42.503132Z'
 publication_types:
 - paper-conference

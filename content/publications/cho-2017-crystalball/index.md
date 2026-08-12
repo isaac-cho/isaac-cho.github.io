@@ -8,6 +8,7 @@ authors:
 - William Ribarsky
 - Wenwen Dou
 date: '2017-01-01'
+featured: true
 publishDate: '2026-08-11T12:59:42.618856Z'
 publication_types:
 - paper-conference

@@ -2,7 +2,7 @@
 
 <div class="max-w-prose mx-auto flex justify-center">
   <article class="prose prose-slate lg:prose-xl dark:prose-invert">
-    <h1 class="lg:text-6xl">{{ .Title }}</h1>
+    <h1 class="lg:text-5xl">{{ .Title }}</h1>
     {{ .Content }}
   </article>
 </div>
@@ -13,24 +13,67 @@
 
 {{ $pages := .Pages.ByDate.Reverse }}
 
-{{ $allCount := len $pages }}
-{{ $journalCount := len (where $pages "Params.publication_types" "intersect" (slice "article-journal")) }}
-{{ $conferenceCount := len (where $pages "Params.publication_types" "intersect" (slice "paper-conference")) }}
-{{ $workshopCount := len (where $pages "Params.publication_types" "intersect" (slice "workshop")) }}
-{{ $posterCount := len (where $pages "Params.publication_types" "intersect" (slice "poster-abstract")) }}
-{{ $chapterCount := len (where $pages "Params.publication_types" "intersect" (slice "book-chapter")) }}
-{{ $reportCount := len (where $pages "Params.publication_types" "intersect" (slice "technical-report-preprint")) }}
 
-{{ $config := dict 
-  "columns" (.Params.columns | default 2) 
-  "len" (len $pages) 
+{{/* =========================
+    Publication counts
+========================= */}}
+
+{{ $allCount := len $pages }}
+
+{{ $journalCount := len (
+  where $pages
+  "Params.publication_types"
+  "intersect"
+  (slice "article-journal")
+) }}
+
+{{ $conferenceCount := len (
+  where $pages
+  "Params.publication_types"
+  "intersect"
+  (slice "paper-conference")
+) }}
+
+{{ $workshopCount := len (
+  where $pages
+  "Params.publication_types"
+  "intersect"
+  (slice "workshop")
+) }}
+
+{{ $posterCount := len (
+  where $pages
+  "Params.publication_types"
+  "intersect"
+  (slice "poster-abstract")
+) }}
+
+{{ $chapterCount := len (
+  where $pages
+  "Params.publication_types"
+  "intersect"
+  (slice "book-chapter")
+) }}
+
+{{ $reportCount := len (
+  where $pages
+  "Params.publication_types"
+  "intersect"
+  (slice "technical-report-preprint")
+) }}
+
+
+{{ $config := dict
+  "columns" (.Params.columns | default 2)
+  "len" (len $pages)
   "fill_image" (.Params.fill_image | default true)
   "show_date" (.Params.show_date | default true)
   "show_read_time" (.Params.show_read_time | default true)
   "show_read_more" (.Params.show_read_more | default true)
 }}
 
-{{/* Check if any pages have author_notes to enable Alpine.js */}}
+
+{{/* Check if any pages have author_notes */}}
 {{ range .Pages }}
   {{ if isset .Params "author_notes" }}
     {{ $.Store.Set "has_alpine" true }}
@@ -38,54 +81,62 @@
   {{ end }}
 {{ end }}
 
-<div class="flex flex-col items-center">
 
-  {{/* Publication filters */}}
-  <div
-    id="publication-filters"
-    style="
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      justify-content: center;
-      margin: 1.5rem 0 2.5rem 0;
-    "
-  >
-    {{/* <button class="pub-filter active" data-filter="all">All</button>
-    <button class="pub-filter" data-filter="article-journal">Journal</button>
-    <button class="pub-filter" data-filter="paper-conference">Conference</button>
-    <button class="pub-filter" data-filter="workshop">Workshop</button>
-    <button class="pub-filter" data-filter="poster-abstract">Poster / Abstract</button>
-    <button class="pub-filter" data-filter="book-chapter">Book Chapter</button>
-    <button class="pub-filter" data-filter="technical-report-preprint">Technical Report / Preprint</button> */}}
-<button class="pub-filter active" data-filter="all">
-  All <span class="pub-count">{{ $allCount }}</span>
-</button>
 
-<button class="pub-filter" data-filter="article-journal">
-  Journal <span class="pub-count">{{ $journalCount }}</span>
-</button>
+<div class="publications-page flex flex-col items-center">
 
-<button class="pub-filter" data-filter="paper-conference">
-  Conference <span class="pub-count">{{ $conferenceCount }}</span>
-</button>
 
-<button class="pub-filter" data-filter="workshop">
-  Workshop <span class="pub-count">{{ $workshopCount }}</span>
-</button>
+  {{/* =========================
+      Publication filters
+  ========================== */}}
 
-<button class="pub-filter" data-filter="poster-abstract">
-  Poster / Abstract <span class="pub-count">{{ $posterCount }}</span>
-</button>
+  <div id="publication-filters">
 
-<button class="pub-filter" data-filter="book-chapter">
-  Book Chapter <span class="pub-count">{{ $chapterCount }}</span>
-</button>
+    <button class="pub-filter active" data-filter="all">
+      All
+      <span class="pub-count">{{ $allCount }}</span>
+    </button>
 
-<button class="pub-filter" data-filter="technical-report-preprint">
-  Technical Report / Preprint <span class="pub-count">{{ $reportCount }}</span>
-</button>
+    <button class="pub-filter" data-filter="article-journal">
+      Journal
+      <span class="pub-count">{{ $journalCount }}</span>
+    </button>
+
+    <button class="pub-filter" data-filter="paper-conference">
+      Conference
+      <span class="pub-count">{{ $conferenceCount }}</span>
+    </button>
+
+    <button class="pub-filter" data-filter="workshop">
+      Workshop
+      <span class="pub-count">{{ $workshopCount }}</span>
+    </button>
+
+    <button class="pub-filter" data-filter="poster-abstract">
+      Poster / Abstract
+      <span class="pub-count">{{ $posterCount }}</span>
+    </button>
+
+    <button class="pub-filter" data-filter="book-chapter">
+      Book Chapter
+      <span class="pub-count">{{ $chapterCount }}</span>
+    </button>
+
+    <button
+      class="pub-filter"
+      data-filter="technical-report-preprint"
+    >
+      Technical Report / Preprint
+      <span class="pub-count">{{ $reportCount }}</span>
+    </button>
+
   </div>
+
+
+
+  {{/* =========================
+      Publication list start
+  ========================== */}}
 
   {{ partial "functions/render_view" (dict
     "fragment" "start"
@@ -95,15 +146,22 @@
     "config" $config
   ) }}
 
+
+
+  {{/* =========================
+      Publication items
+  ========================== */}}
+
   {{ range $index, $item := $pages }}
+
     {{ $category := delimit $item.Params.publication_types " " }}
-    {{/* {{ $category := $item.Params.publication_types | default "" | urlize }} */}}
 
     <div
       class="publication-filter-item"
       data-category="{{ $category }}"
       style="width: 100%;"
     >
+
       {{ partial "functions/render_view" (dict
         "page" $item
         "item" $item
@@ -111,9 +169,16 @@
         "index" $index
         "config" $config
       ) }}
+
     </div>
 
   {{ end }}
+
+
+
+  {{/* =========================
+      Publication list end
+  ========================== */}}
 
   {{ partial "functions/render_view" (dict
     "fragment" "end"
@@ -124,60 +189,238 @@
 
 </div>
 
+
+
 <style>
+
+/* ========================================
+   Filter container
+======================================== */
+
+#publication-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+
+/* ========================================
+   Filter button
+   Same style as News filters
+======================================== */
+
+.pub-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.38rem 0.75rem;
+
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.2;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+
+.pub-filter:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+
+.pub-filter.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+
+/* ========================================
+   Count badge
+======================================== */
+
+.pub-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.32rem;
+
+  border-radius: 5px;
+
+  background: #eef2f7;
+  color: #64748b;
+
+  font-size: 0.67rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+
+.pub-filter.active .pub-count {
+  background: rgba(255, 255, 255, 0.20);
+  color: #fff;
+}
+
+
+/* ========================================
+   Fix citation start spacing
+
+   HugoBlox citation view creates:
+   mt-16 sm:mt-20
+
+   Reduce it on Publications page only.
+======================================== */
+
+.publications-page .mt-16 {
+  margin-top: 2rem !important;
+}
+
+
+@media (min-width: 640px) {
+  .publications-page .sm\:mt-20 {
+    margin-top: 2rem !important;
+  }
+}
+
+
+/* ========================================
+   Dark mode
+======================================== */
+
+.dark .pub-filter {
+  border-color: #334155;
+}
+
+
+.dark .pub-filter:hover {
+  background: #1e293b;
+  border-color: #64748b;
+}
+
+
+.dark .pub-count {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+
+.dark .pub-filter.active .pub-count {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 640px) {
+
+  #publication-filters {
+    gap: 0.4rem;
+
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+
   .pub-filter {
-    padding: 0.45rem 0.9rem;
-    border-radius: 9999px;
-    border: 1px solid #cbd5e1;
-    background: transparent;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.15s ease;
+    padding: 0.3rem 0.55rem;
+
+    font-size: 0.72rem;
   }
 
-  .pub-filter:hover {
-    background: #f1f5f9;
+
+  .pub-count {
+    min-width: 1.1rem;
+    height: 1.1rem;
+
+    padding: 0 0.25rem;
+
+    font-size: 0.6rem;
   }
 
-  .pub-filter.active {
-    background: #2563eb;
-    color: white;
-    border-color: #2563eb;
+
+  .publications-page .mt-16 {
+    margin-top: 1.5rem !important;
   }
 
-  .dark .pub-filter {
-    border-color: #475569;
-  }
+}
 
-  .dark .pub-filter:hover {
-    background: #334155;
-  }
 </style>
 
+
+
 <script>
+
 document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".pub-filter");
-  const items = document.querySelectorAll(".publication-filter-item");
+
+  const buttons =
+    document.querySelectorAll(".pub-filter");
+
+  const items =
+    document.querySelectorAll(".publication-filter-item");
+
 
   buttons.forEach(button => {
+
     button.addEventListener("click", function () {
+
       const filter = this.dataset.filter;
 
-      buttons.forEach(btn => btn.classList.remove("active"));
+
+      buttons.forEach(btn => {
+        btn.classList.remove("active");
+      });
+
+
       this.classList.add("active");
 
-      items.forEach(item => {
-        const category = item.dataset.category;
 
-        if (filter === "all" || category.split(" ").includes(filter)) {
+      items.forEach(item => {
+
+        const categories =
+          item.dataset.category.split(" ");
+
+
+        if (
+          filter === "all" ||
+          categories.includes(filter)
+        ) {
           item.style.display = "";
         } else {
           item.style.display = "none";
         }
+
       });
+
     });
+
   });
+
 });
+
 </script>
+
 
 {{ end }}
