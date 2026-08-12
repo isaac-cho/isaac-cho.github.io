@@ -2,44 +2,29 @@
 
 <div class="news-list-item">
 
-  <span class="news-list-date">
-      {{ with $item.Params.links }}
-      <span class="news-list-links">
-        {{ range . }}
-          <a
-            href="{{ .url }}"
-            {{ if strings.HasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }}
-          >
-            {{ .name | default "More" }}
-          </a>
-        {{ end }}
-      </span>
-    {{ end }}
-
-    {{/* {{ $item.Date.Format "Jan 2006" }} */}}
-  </span>
+  <div class="news-list-date">
+    {{ $item.Date.Format "Jan 2006" }}
+  </div>
 
   <div class="news-list-content">
 
-    <span class="news-list-title">
-      {{ $item.Title }}
-    </span>
-{{/* 
-    {{ with $item.Params.links }}
-      <span class="news-list-links">
-        {{ range . }}
-          <a
-            href="{{ .url }}"
-            {{ if strings.HasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }}
-          >
-            {{ .name | default "More" }}
-          </a>
-        {{ end }}
+    {{ with $item.Params.category }}
+      <span class="news-category news-category-{{ . | lower }}">
+        {{ . }}
       </span>
-    {{ end }} */}}
-    <a href="{{ $item.RelPermalink }}" class="news-more-button">
-      MORE
-    </a>
+    {{ end }}
+
+    <span class="news-list-title">
+      <a href="{{ $item.RelPermalink }}">
+        {{ $item.Title }}
+      </a>
+    </span>
+    {{ if $item.Params.more }}
+      <a href="{{ $item.RelPermalink }}" class="news-more-link">
+        Read more →
+      </a>
+    {{ end }}
+
   </div>
 
 </div>

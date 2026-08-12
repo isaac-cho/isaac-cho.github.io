@@ -11,7 +11,7 @@ authors:
 date: '2026-01-01'
 publishDate: '2026-08-11T12:59:42.384678Z'
 publication_types:
-- paper-conference
+- article-journal
 publication: '*IEEE Transactions on Visualization and Computer Graphics, (TVCG, Special
   issue of IEEE ISMAR 2026), accepted*'
 ---

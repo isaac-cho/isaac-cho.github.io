@@ -13,7 +13,14 @@ authors:
 date: '2024-01-01'
 publishDate: '2026-08-11T12:59:42.802166Z'
 publication_types:
-- paper-conference
+- poster-abstract 
 publication: '*Proceedings of  IEEE International Symposium on Mixed and Augmented
   Reality Adjunct (ISMAR-Adjunct) to appear*'
 ---
+# Publication Types
+# article-journal             = Journal
+# paper-conference            = Conference
+# workshop                    = Workshop
+# poster-abstract             = Poster / Abstract
+# book-chapter                = Book Chapter
+# technical-report-preprint   = Technical Report / Preprint

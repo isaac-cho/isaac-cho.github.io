@@ -13,7 +13,7 @@ sections:
       headings:
         about: 'Short Bio'
         education: ''
-        interests: ''
+        interests: 'Research Interests'
         
       text: ''
       # # Show a call-to-action button under your biography? (optional)
@@ -40,6 +40,8 @@ sections:
         shape: circle # Options: circle (default), square, rounded
 
         
+      spacing:
+        padding: [0, 0, 0, 0]
       
   # - block: markdown
   #   content:
@@ -54,19 +56,19 @@ sections:
   #   design:
   #     css_class: wide-news
 
-  - block: markdown
-    id: news
-    content:
-      title: News
-      text: |-
-        - **Aug 2026** — Served on the International Program Committee (IPC) for IEEE Virtual Reality and 3D User Interfaces (IEEE VR).
-        - **Aug 2026** — Two papers were accepted to the IEEE TVCG Special Track and one paper to the Conference Track at IEEE ISMAR 2026.
-        - **June 2026** — Elevated to IEEE Senior Member.
-        - **April 2026** — Joined the Editorial Board of Computers & Graphics as an Associate Editor.
-    design:
-      css_class: wide-news
+  # - block: markdown
+  #   id: news
+  #   content:
+  #     title: News
+  #     text: |-
+  #       - **Aug 2026** — Served on the International Program Committee (IPC) for IEEE Virtual Reality and 3D User Interfaces (IEEE VR).
+  #       - **Aug 2026** — Two papers were accepted to the IEEE TVCG Special Track and one paper to the Conference Track at IEEE ISMAR 2026.
+  #       - **June 2026** — Elevated to IEEE Senior Member.
+  #       - **April 2026** — Joined the Editorial Board of Computers & Graphics as an Associate Editor.
   #   design:
-  #     columns: '1'
+  #     css_class: wide-news
+  # #   design:
+  # #     columns: '1'
 
   - block: collection
     id: news
@@ -74,7 +76,7 @@ sections:
       title: News
       subtitle: ''
       text: ''
-      page_type: post
+      page_type: news
       count: 10
       filters:
         author: ''
@@ -84,8 +86,9 @@ sections:
         exclude_future: false
         exclude_past: false
         publication_type: ''
-      offset: 0
-      order: desc
+        offset: 0
+        order: desc
+
     design:
       view: news-list
       # view: date-title-summary
@@ -128,15 +131,20 @@ sections:
   #     columns: 2
 
   - block: collection
+    id: publications
     content:
-      title: Recent Publications
+      title: Selected Publications
       text: ''
       filters:
         folders:
           - publications
-        exclude_featured: false
+        featured_only: true
+        #exclude_featured: false
     design:
       view: citation
+    archive:
+      enable: true
+    
 
   # - block: collection
   #   id: talks

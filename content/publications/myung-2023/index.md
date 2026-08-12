@@ -12,7 +12,7 @@ authors:
 date: '2023-01-01'
 publishDate: '2026-08-11T12:59:42.796208Z'
 publication_types:
-- paper-conference
+- poster-abstract 
 publication: '*Proceedings of the  ACM Symposium on Virtual Reality Software and Technology
   (VRST)*'
 ---

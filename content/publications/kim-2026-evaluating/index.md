@@ -4,6 +4,7 @@ authors:
 - DongHoon Kim
 - Isaac Cho
 date: '2026-04-07'
+featured: true
 publishDate: '2026-08-11T11:43:27.091608Z'
 publication_types:
 - article-journal

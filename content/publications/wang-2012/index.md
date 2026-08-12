@@ -9,7 +9,14 @@ authors:
 date: '2012-01-01'
 publishDate: '2026-08-11T12:59:42.884163Z'
 publication_types:
-- paper-conference
+- technical-report-preprint
 publication: '*Charlotte Visualization Center: Technical Report UNCC-CVC-12-15, University
   of North Carolina at Charlotte*'
 ---
+# Publication Types
+# article-journal             = Journal
+# paper-conference            = Conference
+# workshop                    = Workshop
+# poster-abstract             = Poster / Abstract
+# book-chapter                = Book Chapter
+# technical-report-preprint   = Technical Report / Preprint

@@ -11,6 +11,6 @@ authors:
 date: '2024-01-01'
 publishDate: '2026-08-11T12:59:42.866704Z'
 publication_types:
-- article-journal
+- technical-report-preprint
 publication: '*arXiv preprint arXiv:2405.05947*'
 ---
