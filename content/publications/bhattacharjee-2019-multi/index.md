@@ -12,7 +12,7 @@ authors:
 date: '2019-01-01'
 publishDate: '2026-08-11T12:59:42.843513Z'
 publication_types:
-- paper-conference
+- workshop
 publication: '*Proceedings of The Big Data Transfer Learning Workshop, IEEE BigData
   2019 workshop.*'
 ---

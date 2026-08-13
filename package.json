@@ -10,11 +10,14 @@
     "pagefind": "pagefind --site public"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.12",
-    "@tailwindcss/typography": "^0.5.10",
     "hugo": "^0.0.3",
+    "huo": "^0.0.1",
     "pagefind": "^1.4.0",
-    "preact": "^10.27.2",
-    "tailwindcss": "^4.1.12"
+    "preact": "^10.27.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "@tailwindcss/typography": "^0.5.20",
+    "tailwindcss": "^4.3.3"
   }
 }
