@@ -10,6 +10,6 @@ authors:
 date: '2017-01-01'
 publishDate: '2026-08-14T22:00:27.915530Z'
 publication_types:
-- paper-conference
+- book-chapter
 publication: '*International Conference on Computers in Urban Planning and Urban Management*'
 ---

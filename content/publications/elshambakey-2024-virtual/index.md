@@ -16,7 +16,7 @@ authors:
 date: '2024-01-01'
 publishDate: '2026-08-14T22:00:27.907229Z'
 publication_types:
-- chapter
+- book-chapter
 publication: '*Virtual Information Fabrics for Built Environment Sustainability and
   Resilience*'
 ---
