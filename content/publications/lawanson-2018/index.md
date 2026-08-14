@@ -1,6 +1,5 @@
 ---
-title: Advancing the Use of Advanced Metering Infrastructure (AMI) Data through Visual
-  Analytics
+title: Advancing the Use of Advanced Metering Infrastructure (AMI) Data through Visual Analytics
 authors:
 - T. Lawanson
 - R. Karandeh
@@ -10,6 +9,6 @@ authors:
 date: '2018-01-01'
 publishDate: '2026-08-11T12:59:42.768005Z'
 publication_types:
-- paper-conference
+- poster-abstract
 publication: '*Proceedings of DISTRIBUTECH International *'
 ---
