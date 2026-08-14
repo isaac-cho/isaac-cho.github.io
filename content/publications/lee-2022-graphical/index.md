@@ -9,6 +9,6 @@ authors:
 date: '2022-01-01'
 publishDate: '2026-08-11T12:59:42.895874Z'
 publication_types:
-- paper-conference
+- technical-report-preprint
 publication: '*arXiv preprint arXiv:2204.10221*'
 ---

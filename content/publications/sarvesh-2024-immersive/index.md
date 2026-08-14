@@ -16,10 +16,10 @@ publication_types:
 publication: '*2024 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts
   and Workshops (VRW)*'
 ---
-# Publication Types
+<!-- # Publication Types
 # article-journal             = Journal
 # paper-conference            = Conference
 # workshop                    = Workshop
 # poster-abstract             = Poster / Abstract
 # book-chapter                = Book Chapter
-# technical-report-preprint   = Technical Report / Preprint
+# technical-report-preprint   = Technical Report / Preprint -->

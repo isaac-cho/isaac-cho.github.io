@@ -6,7 +6,7 @@ authors:
 date: '2022-01-01'
 publishDate: '2026-08-11T12:59:42.855201Z'
 publication_types:
-- paper-conference
+- workshop
 publication: '*UK Workshop on Biosensing‑enabled, Wellbeing‑Centric Sustainable Built
-  Environment Ecosystem*'
+  Environment Ecosystem (invited)*'
 ---

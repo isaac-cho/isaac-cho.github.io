@@ -8,7 +8,7 @@ authors:
 - Junho, Kim
 - Sun-Jeong Kim
 - Isaac Cho
-date: '2026-01-01'
+date: '2026-11-01'
 featured: true
 links:
 - type: preprint

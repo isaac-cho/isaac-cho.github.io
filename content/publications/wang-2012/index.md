@@ -13,10 +13,10 @@ publication_types:
 publication: '*Charlotte Visualization Center: Technical Report UNCC-CVC-12-15, University
   of North Carolina at Charlotte*'
 ---
-# Publication Types
+<!-- # Publication Types
 # article-journal             = Journal
 # paper-conference            = Conference
 # workshop                    = Workshop
 # poster-abstract             = Poster / Abstract
 # book-chapter                = Book Chapter
-# technical-report-preprint   = Technical Report / Preprint
+# technical-report-preprint   = Technical Report / Preprint -->

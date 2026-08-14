@@ -17,10 +17,10 @@ publication_types:
 publication: '*Proceedings of  IEEE International Symposium on Mixed and Augmented
   Reality Adjunct (ISMAR-Adjunct) to appear*'
 ---
-# Publication Types
+<!-- # Publication Types
 # article-journal             = Journal
 # paper-conference            = Conference
 # workshop                    = Workshop
 # poster-abstract             = Poster / Abstract
 # book-chapter                = Book Chapter
-# technical-report-preprint   = Technical Report / Preprint
+# technical-report-preprint   = Technical Report / Preprint -->

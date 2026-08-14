@@ -10,6 +10,6 @@ authors:
 date: '2026-01-01'
 publishDate: '2026-08-11T12:59:42.402403Z'
 publication_types:
-- paper-conference
+- article-journal
 publication: '*Computer & Graphics*'
 ---
