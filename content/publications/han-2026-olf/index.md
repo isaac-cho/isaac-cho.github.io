@@ -14,4 +14,11 @@ publication_types:
 - article-journal
 publication: '*IEEE Transactions on Visualization and Computer Graphics, (TVCG, Special
   issue of IEEE ISMAR 2026), accepted*'
+links:
+# - type: preprint
+  # provider: arxiv
+  # id: 2509.1134
+- type: video
+  url: https://www.youtube.com/watch?v=EXW5GYSmVBQ
+  target: "_blank"
 ---

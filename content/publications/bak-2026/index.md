@@ -11,9 +11,9 @@ authors:
 date: '2026-11-01'
 featured: true
 links:
-- type: preprint
-  provider: arxiv
-  id: 2601.14561
+# - type: preprint
+#   provider: arxiv
+#   id: 2601.14561
 - type: video
   url: https://www.youtube.com/watch?v=gJJksShDqQI
 publishDate: '2026-08-11T12:59:42.384678Z'

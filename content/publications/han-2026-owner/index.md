@@ -12,4 +12,9 @@ publishDate: '2026-08-11T12:59:42.402403Z'
 publication_types:
 - article-journal
 publication: '*Computer & Graphics*'
+links:
+- type: paper
+  url: https://doi.org/10.1016/j.cag.2026.104583
+# - type: video
+#   url: https://www.youtube.com/watch?v=EXW5GYSmVBQ
 ---
