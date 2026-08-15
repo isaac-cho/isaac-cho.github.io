@@ -12,4 +12,10 @@ publication_types:
 - article-journal
 publication: '*IEEE Transactions on Visualization and Computer Graphics, (TVCG, Special
   issue of IEEE VR 2025)*'
+links:
+- type: preprint
+  provider: arxiv
+  id: 2501.10338
+- type: video
+  url: https://www.youtube.com/watch?v=p9Sko8w0KpA
 ---

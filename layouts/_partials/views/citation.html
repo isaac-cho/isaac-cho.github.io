@@ -4,14 +4,20 @@
 {{ $has_attachments := partial "functions/has_attachments" $item }}
 {{ $pub := partial "functions/resolve_publication.html" $item }}
 {{ $top_award := "" }}
-{{ with $item.Params.awards }}{{ $top_award = index . 0 }}{{ end }}
 
+{{ with $item.Params.awards }}
+  {{ $top_award = index . 0 }}
+{{ end }}
+
+{{/* Featured image */}}
 {{ $featured := $item.Resources.GetMatch "featured*" }}
+
 {{/* Find YouTube URL and extract video ID */}}
 {{ $youtubeID := "" }}
 
 {{ with $item.Params.url_video }}
   {{ $videoURL := . }}
+
   {{ if strings.Contains $videoURL "youtube.com/watch" }}
     {{ $youtubeID = replaceRE `.*[?&]v=([^&]+).*` "$1" $videoURL }}
   {{ else if strings.Contains $videoURL "youtu.be/" }}
@@ -19,10 +25,13 @@
   {{ end }}
 {{ end }}
 
-{{/* Also check links with name "Video" */}}
+{{/* Also check links with type "video" */}}
 {{ if not $youtubeID }}
+
   {{ range $item.Params.links }}
+
     {{ if eq (lower .type) "video" }}
+
       {{ $videoURL := .url }}
 
       {{ if strings.Contains $videoURL "youtube.com/watch" }}
@@ -30,187 +39,398 @@
       {{ else if strings.Contains $videoURL "youtu.be/" }}
         {{ $youtubeID = replaceRE `.*youtu\.be/([^?&/]+).*` "$1" $videoURL }}
       {{ end }}
+
     {{ end }}
+
   {{ end }}
+
 {{ end }}
 
-<div class="pub-list-item view-citation" style="margin-bottom: 1.5rem">
-  <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+
+<div class="pub-list-item view-citation publication-item">
+
+  <div class="publication-citation-row">
+
+    {{/* ========================================================
+         FEATURED IMAGE
+    ========================================================= */}}
 
     {{ if $featured }}
-    <div style="flex: 0 0 200px;">
-      <a href="{{ $item.RelPermalink }}">
-        <img
-          src="{{ $featured.RelPermalink }}"
-          alt="{{ $item.Title }}"
-          style="
-            width: 200px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 6px;
-            display: block;
-          "
-        >
-      </a>
-    </div>
+
+      <div class="publication-thumb">
+
+        <a href="{{ $item.RelPermalink }}">
+
+          <img
+            src="{{ $featured.RelPermalink }}"
+            alt="{{ $item.Title }}"
+          >
+
+        </a>
+
+      </div>
+
+
+    {{/* ========================================================
+         YOUTUBE FALLBACK IMAGE
+    ========================================================= */}}
+
     {{ else if $youtubeID }}
-    <div style="flex: 0 0 200px;">
-      <img
-        src="https://i.ytimg.com/vi/{{ $youtubeID }}/hqdefault.jpg"
-        alt="{{ $item.Title }}"
-        style="
-          width: 200px;
-          height: 120px;
-          object-fit: cover;
-          border-radius: 6px;
-          display: block;
-        "
-      >
-    </div>
-    {{/* <div style="flex: 0 0 200px; position: relative;">
-      <a
-        href="https://www.youtube.com/watch?v={{ $youtubeID }}"
-        target="_blank"
-        rel="noopener"
-        style="display: block; position: relative;"
-      >
+
+      <div class="publication-thumb">
+
         <img
           src="https://i.ytimg.com/vi/{{ $youtubeID }}/hqdefault.jpg"
-          alt="Video for {{ $item.Title }}"
-          style="
-            width: 200px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 6px;
-            display: block;
-          "
+          alt="{{ $item.Title }}"
         >
 
-        <span
-          style="
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 42px;
-            height: 30px;
-            background: rgba(255, 0, 0, 0.9);
-            border-radius: 7px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 16px;
-          "
-        >▶</span>
-
-      </a>
-    </div> */}}
+      </div>
 
     {{ end }}
 
-    <div style="flex: 1; min-width: 0;">
-      <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
 
-      {{/* APA Style */}}
+    {{/* ========================================================
+         PUBLICATION INFORMATION
+    ========================================================= */}}
+
+    <div class="publication-citation-text">
+
+      <i
+        class="far fa-file-alt pub-icon"
+        aria-hidden="true"
+      ></i>
+
+
+      {{/* ======================================================
+           APA STYLE
+      ======================================================= */}}
+
       {{ if eq (site.Params.hugoblox.content.citations.style | default "apa") "apa" }}
 
-      {{ $pubType := "" }}
-      {{ with $item.Params.publication_types }}
-        {{ $pubType = index . 0 }}
-      {{ end }}
-      {{ if eq $pubType "article-journal" }}
-        <span class="pub-type-badge pub-type-journal">Journal</span>
+        {{ $pubType := "" }}
 
-      {{ else if eq $pubType "paper-conference" }}
-        <span class="pub-type-badge pub-type-conference">Conference</span>
+        {{ with $item.Params.publication_types }}
+          {{ $pubType = index . 0 }}
+        {{ end }}
 
-      {{ else if eq $pubType "workshop" }}
-        <span class="pub-type-badge pub-type-workshop">Workshop</span>
 
-      {{ else if eq $pubType "poster-abstract" }}
-        <span class="pub-type-badge pub-type-poster">Poster / Abstract</span>
+        {{/* ====================================================
+             CATEGORY BADGE
+        ===================================================== */}}
 
-      {{ else if eq $pubType "chapter" }}
-        <span class="pub-type-badge pub-type-chapter">Book Chapter</span>
+        {{ if eq $pubType "article-journal" }}
 
-      {{ else if eq $pubType "report" }}
-        <span class="pub-type-badge pub-type-report">Report</span>
+          <span class="pub-type-badge pub-type-journal">
+            Journal
+          </span>
 
-      {{ else if eq $pubType "technical-report-preprint" }}
-          <span class="pub-type-badge pub-type-report">Technical Report</span>
-      {{ end }}
+        {{ else if eq $pubType "paper-conference" }}
 
-      <span class="article-metadata li-cite-author">
-        {{ partial "page_metadata_authors" $item }}
-      </span>
-      ({{- $year -}}).
+          <span class="pub-type-badge pub-type-conference">
+            Conference
+          </span>
 
-      <a href="{{ $item.RelPermalink }}" class="underline">{{ $item.Title }}</a>.
-      {{ with $pub.display_short }}{{- . | markdownify -}}.{{ end }}
+        {{ else if eq $pubType "workshop" }}
 
-      {{ with $top_award }}
-        <span class="ml-1">
-          {{ partial "components/award_badge.html" (dict "award" . "page" $item "variant" "inline") }}
+          <span class="pub-type-badge pub-type-workshop">
+            Workshop
+          </span>
+
+        {{ else if eq $pubType "poster-abstract" }}
+
+          <span class="pub-type-badge pub-type-poster">
+            Poster / Abstract
+          </span>
+
+        {{ else if eq $pubType "chapter" }}
+
+          <span class="pub-type-badge pub-type-chapter">
+            Book Chapter
+          </span>
+
+        {{ else if eq $pubType "report" }}
+
+          <span class="pub-type-badge pub-type-report">
+            Report
+          </span>
+
+        {{ else if eq $pubType "technical-report-preprint" }}
+
+          <span class="pub-type-badge pub-type-report">
+            Technical Report
+          </span>
+
+        {{ end }}
+
+
+        {{/* ====================================================
+             AUTHORS
+        ===================================================== */}}
+
+        <span class="article-metadata li-cite-author">
+          {{ partial "page_metadata_authors" $item }}
         </span>
-      {{ end }}
 
-      {{ if $has_attachments }}
-      <div class="flex flex-wrap space-x-3">
-        {{ partial "page_links" (dict "page" $item "is_list" 1) }}
-      </div>
-      {{ end }}
+        ({{- $year -}}).
 
-      {{/* MLA Style */}}
+
+        {{/* ====================================================
+             TITLE
+        ===================================================== */}}
+
+        <a
+          href="{{ $item.RelPermalink }}"
+          class="underline"
+        >
+          {{ $item.Title }}
+        </a>.
+
+
+        {{/* ====================================================
+             PUBLICATION
+        ===================================================== */}}
+
+        {{ with $pub.display_short }}
+          {{- . | markdownify -}}.
+        {{ end }}
+
+
+        {{/* ====================================================
+             AWARD
+        ===================================================== */}}
+
+        {{ with $top_award }}
+
+          <span class="ml-1">
+
+            {{ partial "components/award_badge.html"
+              (dict
+                "award" .
+                "page" $item
+                "variant" "inline"
+              )
+            }}
+
+          </span>
+
+        {{ end }}
+
+
+        {{/* ====================================================
+             VIDEO / CITE / PDF / OTHER LINKS
+        ===================================================== */}}
+
+        {{ if $has_attachments }}
+
+          <div class="flex flex-wrap space-x-3">
+
+            {{ partial "page_links"
+              (dict
+                "page" $item
+                "is_list" 1
+              )
+            }}
+
+          </div>
+
+        {{ end }}
+
+
+      {{/* ======================================================
+           MLA STYLE
+      ======================================================= */}}
+
       {{ else }}
 
-      <span class="article-metadata li-cite-author">
-        {{ partial "page_metadata_authors" $item }}.
-      </span>
-      <a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a>.
-      {{ with $pub.display_short }}{{- . | markdownify -}},{{ end }}
-      {{- $year -}}.
 
-      {{ with $top_award }}
-        <span class="ml-1">
-          {{ partial "components/award_badge.html" (dict "award" . "page" $item "variant" "inline") }}
+        <span class="article-metadata li-cite-author">
+
+          {{ partial "page_metadata_authors" $item }}.
+
         </span>
+
+
+        <a href="{{ $item.RelPermalink }}">
+
+          {{ $item.Title }}
+
+        </a>.
+
+
+        {{ with $pub.display_short }}
+
+          {{- . | markdownify -}},
+
+        {{ end }}
+
+        {{- $year -}}.
+
+
+        {{ with $top_award }}
+
+          <span class="ml-1">
+
+            {{ partial "components/award_badge.html"
+              (dict
+                "award" .
+                "page" $item
+                "variant" "inline"
+              )
+            }}
+
+          </span>
+
+        {{ end }}
+
+
+        {{ if $has_attachments }}
+
+          <div class="flex flex-wrap space-x-3">
+
+            {{ partial "page_links"
+              (dict
+                "page" $item
+                "is_list" 1
+              )
+            }}
+
+          </div>
+
+        {{ end }}
+
+
       {{ end }}
 
-      {{ if $has_attachments }}
-      <div class="flex flex-wrap space-x-3">
-        {{ partial "page_links" (dict "page" $item "is_list" 1) }}
-      </div>
-      {{ end }}
-
-      {{ end }}
     </div>
 
   </div>
+
 </div>
+
 
 <style>
 
-@media (max-width: 700px) {
+/* ============================================================
+   PUBLICATION ITEM
+============================================================ */
+
+.publication-item {
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   DEFAULT LAYOUT
+   Desktop / Tablet:
+   Image left + text right
+============================================================ */
+
+.publication-citation-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+
+/* ============================================================
+   THUMBNAIL
+============================================================ */
+
+.publication-thumb {
+  flex: 0 0 200px;
+  width: 200px;
+}
+
+.publication-thumb img {
+  display: block;
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+
+/* ============================================================
+   TEXT
+============================================================ */
+
+.publication-citation-text {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* ============================================================
+   SMALLER DESKTOP / TABLET
+   Add left/right margin only
+============================================================ */
+
+@media (max-width: 900px) {
+
+  .publication-item {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+}
+
+
+/* ============================================================
+   PHONE
+   Image TOP + text BELOW
+============================================================ */
+
+/* ============================================================
+   PHONE
+   Image TOP + centered + full width
+============================================================ */
+
+@media (max-width: 600px) {
+
+  .publication-item {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .publication-citation-row {
     flex-direction: column;
+    align-items: center;
     gap: 0.75rem;
   }
 
   .publication-thumb {
-    width: 180px;
     flex: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .publication-thumb a {
+    display: block;
+    width: 100%;
   }
 
   .publication-thumb img {
-    width: 180px;
-    height: 108px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 3;
+    object-fit: cover;
+    border-radius: 6px;
   }
 
   .publication-citation-text {
+    flex: none;
     width: 100%;
+    min-width: 0;
   }
 }
+
+/* ============================================================
+   CATEGORY BADGES
+============================================================ */
+
 .pub-type-badge {
   display: inline-block;
   padding: 0.15rem 0.5rem;
@@ -223,40 +443,66 @@
   white-space: nowrap;
 }
 
+
+/* Journal */
+
 .pub-type-journal {
   color: #1d4ed8;
   background-color: #dbeafe;
 }
+
+
+/* Conference */
 
 .pub-type-conference {
   color: #047857;
   background-color: #d1fae5;
 }
 
-.pub-type-chapter {
-  color: #7c3aed;
-  background-color: #ede9fe;
-}
 
-.dark .pub-type-workshop {
-  color: #fed7aa;
-  background-color: #7c2d12;
-}
-
-.pub-type-preprint {
-  color: #be123c;
-  background-color: #ffe4e6;
-}
+/* Workshop */
 
 .pub-type-workshop {
   color: #b45309;
   background-color: #fef3c7;
 }
 
+
+/* Poster / Abstract */
+
 .pub-type-poster {
   color: #be185d;
   background-color: #fce7f3;
 }
+
+
+/* Book Chapter */
+
+.pub-type-chapter {
+  color: #7c3aed;
+  background-color: #ede9fe;
+}
+
+
+/* Report */
+
+.pub-type-report {
+  color: #475569;
+  background-color: #e2e8f0;
+}
+
+
+/* Preprint */
+
+.pub-type-preprint {
+  color: #be123c;
+  background-color: #ffe4e6;
+}
+
+
+/* ============================================================
+   DARK MODE
+============================================================ */
 
 .dark .pub-type-journal {
   color: #bfdbfe;
@@ -285,11 +531,12 @@
 
 .dark .pub-type-workshop {
   color: #fed7aa;
-  background-color: #475569;
+  background-color: #7c2d12;
 }
 
 .dark .pub-type-poster {
   color: #fbcfe8;
   background-color: #831843;
 }
+
 </style>

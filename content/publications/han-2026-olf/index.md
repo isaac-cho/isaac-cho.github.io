@@ -12,8 +12,7 @@ date: '2026-11-01'
 publishDate: '2026-08-11T12:59:42.376278Z'
 publication_types:
 - article-journal
-publication: '*IEEE Transactions on Visualization and Computer Graphics, (TVCG, Special
-  issue of IEEE ISMAR 2026), accepted*'
+publication: '*IEEE Transactions on Visualization and Computer Graphics, (TVCG, Special issue of IEEE ISMAR 2026), accepted*'
 links:
 # - type: preprint
   # provider: arxiv
