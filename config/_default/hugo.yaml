@@ -69,9 +69,11 @@ security:
       - '^node$'
       - '^postcss$'
       - '^tailwindcss$'
+
 services:
   googleAnalytics:
     id: G-9J0X16FQSY
 
 sitemap:
   _merge: deep
+
