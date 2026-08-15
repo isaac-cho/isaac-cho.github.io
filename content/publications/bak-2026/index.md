@@ -1,6 +1,5 @@
 ---
-title: 'Smelling the Way: Olfactory Modulation of Spatial Estimation and Path Integration
-  in Virtual Reality'
+title: 'Smelling the Way: Olfactory Modulation of Spatial Estimation and Path Integration in Virtual Reality'
 authors:
 - Siyeon, Bak
 - Dongyun, Han

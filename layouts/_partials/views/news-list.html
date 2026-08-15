@@ -15,10 +15,15 @@
     {{ end }}
 
     <span class="news-list-title">
-      <a href="{{ $item.RelPermalink }}">
+      {{ if $item.Params.more }}
+        <a href="{{ $item.RelPermalink }}">
+          {{ $item.Title }}
+        </a>
+      {{ else }}
         {{ $item.Title }}
-      </a>
+      {{ end }}
     </span>
+
     {{ if $item.Params.more }}
       <a href="{{ $item.RelPermalink }}" class="news-more-link">
         Read more →

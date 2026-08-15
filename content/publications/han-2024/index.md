@@ -8,10 +8,10 @@ authors:
 - Isaac Cho
 date: '2025-01-01'
 publishDate: '2026-08-11T12:59:42.414156Z'
+featured: true
 publication_types:
 - article-journal
-publication: '*IEEE Transactions on Visualization and Computer Graphics, (TVCG, Special
-  issue of IEEE VR 2025)*'
+publication: '*IEEE Transactions on Visualization and Computer Graphics, (TVCG, Special issue of IEEE VR 2025)*'
 links:
 - type: preprint
   provider: arxiv
