@@ -77,7 +77,7 @@ sections:
       subtitle: ''
       text: ''
       page_type: news
-      count: 3
+      count: 10
       filters:
         author: ''
         category: ''
