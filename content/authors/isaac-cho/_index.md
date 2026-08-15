@@ -1,0 +1,7 @@
+---
+title: Isaac Cho
+role: Associate Professor
+
+user_groups:
+  - Faculty
+---

@@ -9,14 +9,21 @@ main:
   #   weight: 10
   - name: News
     url: /news
-    weight: 11
+    weight: 10
+  # - name: Teams
+  #   url: /teams/
+    # weight: 11
   - name: Publications
     url: /publications
     weight: 12
   - name: Research
     url: /research/
     weight: 13
-  # - name: Talks
+  
+  # - name: Teaching
+  #   url: /teaching/
+  #   weight: 13
+    # - name: Talks
   #   url: /#talks
   #   weight: 12
 

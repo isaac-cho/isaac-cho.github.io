@@ -1,0 +1,25 @@
+name:
+  display: Isaac Cho
+  given: Isaac
+  family: Cho
+
+role: Associate Professor
+
+affiliations:
+  - name: Hallym University
+
+bio: >
+  My research focuses on data visualization, visual analytics,
+  virtual and augmented reality, immersive analytics, and
+  human-computer interaction.
+
+interests:
+  - Data Visualization
+  - Visual Analytics
+  - Virtual Reality
+  - Augmented Reality
+  - Immersive Analytics
+  - Human-Computer Interaction
+
+user_groups:
+  - Faculty

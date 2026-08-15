@@ -6,7 +6,7 @@
 # Website name (set in params.yaml under hugoblox.branding.name)
 title: ''
 # Website URL
-baseURL: 'https://example.com/'
+baseURL: 'https://isaac-cho.github.io/'
 
 ############################
 ## LANGUAGE
@@ -69,5 +69,9 @@ security:
       - '^node$'
       - '^postcss$'
       - '^tailwindcss$'
+services:
+  googleAnalytics:
+    id: G-9J0X16FQSY
+
 sitemap:
   _merge: deep
