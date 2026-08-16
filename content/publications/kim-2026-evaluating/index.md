@@ -5,6 +5,7 @@ authors:
 - Isaac Cho
 date: '2026-04-07'
 featured: true
+weight: 2
 publishDate: '2026-08-11T11:43:27.091608Z'
 publication_types:
 - article-journal

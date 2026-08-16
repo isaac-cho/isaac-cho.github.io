@@ -6,6 +6,7 @@ authors:
 - Zachary Wartell
 date: '2017-01-01'
 featured: true
+weight: 8
 publishDate: '2026-08-11T12:59:42.473819Z'
 publication_types:
 - article-journal

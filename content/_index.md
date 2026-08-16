@@ -136,6 +136,8 @@ sections:
       title: Selected Publications
       text: ''
       count: 100
+      sort_by: Weight
+      sort_ascending: true
       filters:
         folders:
           - publications

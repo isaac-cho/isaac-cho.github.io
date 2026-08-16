@@ -9,6 +9,7 @@ authors:
 date: '2025-01-01'
 publishDate: '2026-08-11T12:59:42.414156Z'
 featured: true
+weight: 3
 publication_types:
 - article-journal
 publication: '*IEEE Transactions on Visualization and Computer Graphics, (TVCG, Special issue of IEEE VR 2025)*'

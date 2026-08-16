@@ -9,6 +9,7 @@ authors:
 - Isaac Cho
 date: '2025-01-01'
 featured: true
+weight: 6
 links:
 - type: preprint
   provider: arxiv

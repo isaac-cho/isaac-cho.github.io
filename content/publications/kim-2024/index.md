@@ -7,7 +7,7 @@ authors:
 - Siyeon Bak
 - Isaac Cho
 date: '2024-01-01'
-featured: true
+# featured: true
 links:
 - type: preprint
   provider: arxiv
