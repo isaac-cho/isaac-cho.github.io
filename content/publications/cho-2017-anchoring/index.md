@@ -16,7 +16,7 @@ publication_types:
 publication: '*proceedings of IEEE Conference on Visual Analytics Science and Technology
   (VAST)*'
 links:
-- type: preprnt
+- type: preprint
   url: https://www.researchgate.net/publication/329910768_The_Anchoring_Effect_in_Decision-Making_with_Visual_Analytics
   target: '_blank'
 # - type: video
