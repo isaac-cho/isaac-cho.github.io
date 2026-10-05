@@ -2,7 +2,7 @@
 title: "Two papers accepted to the IEEE TVCG Special Track and one paper to the Conference Track at IEEE ISMAR 2026"
 date: 2026-08-01
 
-category: research
+category: Research
 
 more: true
 

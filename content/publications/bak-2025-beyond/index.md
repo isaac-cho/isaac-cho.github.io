@@ -7,7 +7,7 @@ authors:
 - Inho Jo
 - SunJeong Kim
 - Isaac Cho
-date: '2025-01-01'
+date: '2026-08-11'
 featured: true
 weight: 6
 links:

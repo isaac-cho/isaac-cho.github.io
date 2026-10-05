@@ -20,7 +20,7 @@ status:
 role: Associate Professor of Computer Science
 
 bio: |
-  Dr. Isaac Cho is an Associate Professor of Computer Science at Hallym University. His research focuses on data visualization, visual analytics, immersive analytics, VR/AR/XR, and 3D user interfaces. His work explores how people interact with, perceive, and make decisions using visual and immersive systems. Prior to joining Hallym University, he was an Assistant Professor of Computer Science at Utah State University and North Carolina A&T State University.
+  Dr. Isaac Cho is an Associate Professor at the AI Convergence Research Institute at Hallym University. His research lies at the intersection of human–computer interaction, data visualization, visual analytics, and immersive computing, including VR/AR/XR and 3D user interfaces. His work investigates how people perceive, interact with, and make decisions using visual and immersive systems.
 affiliations:
   - name: Hallym University
     url: https://www.hallym.ac.kr/
@@ -49,6 +49,7 @@ interests:
   - Virtual Reality
   - Extended Reality
   - Spatial Computing
+  - Visual Computing
   - 3D User Interfaces
   - Human-Computer Interaction
 
