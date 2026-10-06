@@ -6,9 +6,10 @@ authors:
 - Donghoon Kim
 - Garrett Woodhouse
 - Isaac Cho
-date: '2026-01-01'
-publishDate: '2026-08-11T12:59:42.390758Z'
+date: '2026-09-15'
+featured: true
+publishDate: '2026-09-15T12:59:42.390758Z'
 publication_types:
 - article-journal
-publication: '*IEEE Transactions on Visualization and Computer Graphics, (TVCG), accepted*'
+publication: '*IEEE Transactions on Visualization and Computer Graphics, (TVCG)*'
 ---
