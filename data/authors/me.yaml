@@ -17,10 +17,10 @@ postnominals:
 status:
   icon: "" # Example: "☕️"
 
-role: Associate Professor of Computer Science
+role: Associate Professor
 
 bio: |
-  Dr. Isaac Cho is an Associate Professor at the AI Convergence Research Institute at Hallym University. His research lies at the intersection of human–computer interaction, data visualization, visual analytics, and immersive computing, including VR/AR/XR and 3D user interfaces. His work investigates how people perceive, interact with, and make decisions using visual and immersive systems.
+  Dr. Isaac Cho is an Associate Professor at the AI Convergence Research Institute at Hallym University. His research lies at the intersection of human–computer interaction, data visualization, visual analytics, and immersive computing, including VR/AR/XR and 3D user interfaces. His work investigates how people perceive, interact with, and make decisions using visual and immersive systems. He serves as an Associate Editor for IEEE Transactions on Visualization and Computer Graphics (TVCG) and Elsevier Computers & Graphics and is an IEEE Senior Member.
 affiliations:
   - name: Hallym University
     url: https://www.hallym.ac.kr/
