@@ -24,6 +24,9 @@ sections:
       #   about: ''
       #   education: ''
       #   interests: ''
+      button:
+        text: Pive
+        url: /lab/
     design:
       # Use the new Gradient Mesh which automatically adapts to the selected theme colors
       background:

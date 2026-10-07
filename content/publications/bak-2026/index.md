@@ -13,7 +13,7 @@ weight: 4
 links:
 - type: preprint
   provider: arxiv
-  id: 22609.32992
+  id: 2609.32992
 - type: video
   url: https://www.youtube.com/watch?v=gJJksShDqQI
 publishDate: '2026-08-11T12:59:42.384678Z'

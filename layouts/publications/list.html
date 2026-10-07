@@ -152,7 +152,7 @@
       Publication items
   ========================== */}}
 
-  {{ range $index, $item := $pages }}
+  {{/* {{ range $index, $item := $pages }}
 
     {{ $category := delimit $item.Params.publication_types " " }}
 
@@ -172,9 +172,45 @@
 
     </div>
 
-  {{ end }}
+  {{ end }} */}}
 
+{{ $index := 0 }}
 
+{{ range $group := $pages.GroupByDate "2006" }}
+
+  <div class="publication-year-group" data-year="{{ $group.Key }}">
+
+    <h2 class="publication-year">
+      {{ $group.Key }}
+    </h2>
+
+    {{ range $item := $group.Pages }}
+
+      {{ $category := delimit $item.Params.publication_types " " }}
+
+      <div
+        class="publication-filter-item"
+        data-category="{{ $category }}"
+        style="width: 100%;"
+      >
+
+        {{ partial "functions/render_view" (dict
+          "page" $item
+          "item" $item
+          "view" $view
+          "index" $index
+          "config" $config
+        ) }}
+
+      </div>
+
+      {{ $index = add $index 1 }}
+
+    {{ end }}
+
+  </div>
+
+{{ end }}
 
   {{/* =========================
       Publication list end
@@ -329,7 +365,16 @@
   color: #fff;
 }
 
+.publication-year {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  text-align: center;
+}
 /* ========================================
    Mobile
 ======================================== */
@@ -366,6 +411,7 @@
   }
 
 }
+
 
 </style>
 
