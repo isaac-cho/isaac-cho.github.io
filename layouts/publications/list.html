@@ -459,7 +459,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
       });
+      // Hide year headings when no publications are visible
+      document.querySelectorAll(".publication-year-group")
+        .forEach(group => {
 
+          const visibleItems = Array.from(
+            group.querySelectorAll(".publication-filter-item")
+          ).filter(item => item.style.display !== "none");
+
+          group.style.display =
+            visibleItems.length > 0 ? "" : "none";
+
+        });
     });
 
   });
