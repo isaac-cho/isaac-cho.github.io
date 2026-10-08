@@ -25,7 +25,7 @@ sections:
       #   education: ''
       #   interests: ''
       button:
-        text: Pive
+        text: Join the Team
         url: /lab/
     design:
       # Use the new Gradient Mesh which automatically adapts to the selected theme colors
