@@ -48,7 +48,7 @@ sections:
         **Selected papers**
 
         - [Beyond Arm’s Reach: Revisiting 3D Interaction Techniques for Virtual Display Management in Immersive Workspaces](/publications/han-2026/)
-        - [Investigating Scale-Control Strategies for Portal-Based Remote Object Manipulation in Virtual Reality](/publications/REPLACE-WITH-SLUG/)
+        - [PORTAL: Portal Widget for Remote Target Acquisition and Control in Immersive Virtual Environments ](/publications/han-2022-portal/)
         - [Evaluating Preattentive Features for Detecting Changes in Virtual Environments](/publications/kim-2026-evaluating/)
 
     design:
@@ -76,9 +76,9 @@ sections:
 
         **Selected papers**
 
-        - [PDViz: A Visual Analytics Approach for State Policy Data](/publications/REPLACE-WITH-PDVIZ-SLUG/)
-        - [HisVA: A Visual Analytics System for Learning History](/publications/REPLACE-WITH-HISVA-SLUG/)
-        - [Investigating Effects of Visual Anchors on Decision-Making about Misinformation](/publications/REPLACE-WITH-VISUAL-ANCHORS-SLUG/)
+        - [PDViz: A Visual Analytics Approach for State Policy Data](/publications/han-2022/)
+        - [HisVA: A Visual Analytics System for Learning History](/publications/han-2021-hisva/)
+        - [Investigating Effects of Visual Anchors on Decision-Making about Misinformation](/publications/wesslen-2019-investigating/)
 
     design:
       css_class: research-page research-direction
@@ -103,9 +103,9 @@ sections:
 
         **Selected papers**
 
-        - [Smelling the Way: Olfactory Modulation of Spatial Estimation and Path Integration in Virtual Reality](/publications/REPLACE-WITH-SLUG/)
+        - [Smelling the Way: Olfactory Modulation of Spatial Estimation and Path Integration in Virtual Reality](/publications/bak-2026/)
         - [Exploring the Effects of Olfactory Cues and Ventilation on Teleportation-Based Navigation in VR](/publications/han-2026-olf/)
-        - [Beyond the Portal: Enhancing Recognition in VR Through Multisensory Cues](/publications/REPLACE-WITH-SLUG/)
+        - [Beyond the Portal: Enhancing Recognition in VR Through Multisensory Cues](/publications/bak-2025-beyond/)
 
     design:
       css_class: research-page research-direction
