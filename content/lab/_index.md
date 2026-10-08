@@ -18,6 +18,8 @@
 
 새로운 인터랙티브 시스템을 설계하고 구현하며, 사용자 경험과 상호작용을 연구할 학생들의 참여를 환영합니다.
 
+자세한 연구 분야와 진행 중인 연구는 [Research 페이지](/research/)에서 확인할 수 있습니다.
+
 ### 연구 참여 기회
 
 - 인터랙티브 시스템 및 연구 프로토타입 설계·개발
@@ -59,6 +61,8 @@ GVE Lab은 NAIST, University of Calgary, UC Davis 등의 연구자들과 국제 
 The **Interactive Computing Group** at GVE Lab (Graphics & Virtual Environment Lab), led by Prof. Isaac Cho at Hallym University, conducts research in human–computer interaction (HCI), data visualization and visual analytics, immersive computing (VR/AR/XR), 3D user interfaces, and human–AI interaction.
 
 We welcome motivated students interested in designing, developing, and evaluating interactive systems.
+
+For more information about our research areas and ongoing projects, please visit the [Research page](/research/).
 
 ### Research Opportunities
 
