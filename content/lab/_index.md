@@ -2,15 +2,31 @@
 <style>
 /* Interactive Computing Group - responsive page */
 
-.icg-page {
-  width: 100%;
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 24px 32px 64px;
-  box-sizing: border-box;
-  line-height: 1.8;
-  overflow-wrap: break-word;
+/* Widen Hugo Blox content container on desktop */
+/* Desktop: centered content */
+@media (min-width: 1024px) {
+  .article-container,
+  .page-body,
+  .prose,
+  .max-w-prose,
+  .max-w-screen-md,
+  .max-w-3xl {
+    width: 100%;
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .icg-page {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 32px 40px 64px;
+    box-sizing: border-box;
+  }
 }
+
 
 .icg-page h1 {
   font-size: clamp(1.65rem, 4vw, 2.25rem);
