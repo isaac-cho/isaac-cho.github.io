@@ -167,7 +167,7 @@
 
 ## 연구실 참여
 
-한림대학교 <strong>GVE Lab (Graphics & Virtual Environment Lab)</strong>의 **Interactive Computing Group**은 조이삭 교수가 이끄는 연구 그룹으로, 사람들이 데이터, 디지털 환경, 인공지능과 보다 효과적으로 상호작용할 수 있도록 새로운 인터랙티브 시스템과 사용자 인터페이스를 연구합니다.
+한림대학교 <strong>Interactive Computing Lab (IC Lab)</strong>은 사람들이 데이터, 디지털 환경, 인공지능과 보다 효과적으로 상호작용할 수 있도록 새로운 인터랙티브 시스템과 사용자 인터페이스를 연구합니다.
 
 주요 연구 분야는 **인간-컴퓨터 상호작용(HCI), 데이터 시각화 및 비주얼 애널리틱스, 몰입형 컴퓨팅(VR/AR/XR), 3D 사용자 인터페이스, Human–AI Interaction**입니다.
 
@@ -284,7 +284,7 @@ VR/AR/XR 환경에서 사용자가 가상 객체 및 디지털 정보와 자연�
 
 ## Join the Team
 
-The **Interactive Computing Group** at GVE Lab (Graphics & Virtual Environment Lab), led by Prof. Isaac Cho at Hallym University, investigates how people interact with data, digital environments, and intelligent systems. Our research focuses on designing, developing, and evaluating interactive systems that support human perception, interaction, and analytical reasoning.
+The <strong>Interactive Computing Lab (IC Lab)</strong> investigates how people interact with data, digital environments, and intelligent systems. Our research focuses on designing, developing, and evaluating interactive systems that support human perception, interaction, and analytical reasoning.
 
 Our research spans **human–computer interaction (HCI), data visualization and visual analytics, immersive computing (VR/AR/XR), 3D user interfaces, and human–AI interaction**.
 
