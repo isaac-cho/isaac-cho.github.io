@@ -159,7 +159,7 @@
   <a href="#english">English</a>
 </div>
 
-# Interactive Computing
+# Interactive Computing Lab
 
 ---
 
